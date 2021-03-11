@@ -1,0 +1,4 @@
+<select *ngIf="dropDownOptions" [(ngModel)]="optSelected" (ngModelChange)="returnVal(optSelected)">
+  <option value="select">select</option>
+  <option *ngFor = "let ddOption in dropDownOptions" [value]="ddOption.val">{{ddOption.txt}}</option>
+</select>
